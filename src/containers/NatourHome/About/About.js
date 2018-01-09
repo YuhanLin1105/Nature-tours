@@ -7,35 +7,51 @@ import imgNat3 from '../../../assets/img/nat-3-large.jpg';
 
 
 const about = (props) => {
+    const aboutContent = {
+        title:"EXCITING TOURS FOR ADVENTUROUS PEOPLE",
+        textContent: {
+            title: "Exciting tours for adventurous people",
+            subTitle1: "You are going to fall in love with nature",
+            content1: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione necessitatibus, earum magnam laborum quibusdam totam eius veniam voluptate labore officia aperiam, libero soluta nam hic magni corrupti quam est mollitia!",
+            subTitle2: "Live adventures like you never have before",
+            content2:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione necessitatibus, libero soluta nam hic magni corrupti quam est mollitia!"
+        },
+        imgContent:{
+            imgNat1,
+            imgNat2,
+            imgNat3
+        }
+    }
+
     return (
-        <section class="section-about">
-            <Utility uType={["u-center-text","u-margin-bottom-big"]}>
-                <h2 class="heading-secondary">
-                    Exciting tours for adventurous people
+        <section className="section-about">
+            <div className="u-center-text u-margin-bottom-big">
+                <h2 className="heading-secondary">
+                    {aboutContent.title}
                 </h2>
-            </Utility>
-            <div class="row">
-                <div class="col-1-of-2">
-                    <h3 class="heading-tertiary u-margin-bottom-small">
-                        You are going to fall in love with nature
+            </div>
+            <div className="row">
+                <div className="col-1-of-2">
+                    <h3 className="heading-tertiary u-margin-bottom-small">
+                        {aboutContent.textContent.subTitle1}
                     </h3>
-                    <p class="paragraph">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione necessitatibus, earum magnam laborum quibusdam totam eius veniam voluptate labore officia aperiam, libero soluta nam hic magni corrupti quam est mollitia!
+                    <p className="paragraph">
+                        {aboutContent.textContent.content1}
                     </p>
-                    <h3 class="heading-tertiary u-margin-bottom-small">
-                        Live adventures like you never have before
+                    <h3 className="heading-tertiary u-margin-bottom-small">
+                        {aboutContent.textContent.subTitle2}
                     </h3>
-                    <p class="paragraph">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione necessitatibus, libero soluta nam hic magni corrupti quam est mollitia!
+                    <p className="paragraph">
+                        {aboutContent.textContent.content2}
                     </p>
                     <Button btnType="btn-text">Learn more &rarr;</Button>
                 </div>
 
-                <div class="col-1-of-2">
+                <div className="col-1-of-2">
                     <div className="composition">
-                        <img src={imgNat1}  className="composition__photo composition__photo--p1"/>
-                        <img src={imgNat2}  className="composition__photo composition__photo--p2"/>
-                        <img src={imgNat3}  className="composition__photo composition__photo--p3"/>
+                        <img src={aboutContent.imgContent.imgNat1} className="composition__photo composition__photo--p1" />
+                        <img src={aboutContent.imgContent.imgNat2} className="composition__photo composition__photo--p2" />
+                        <img src={aboutContent.imgContent.imgNat3} className="composition__photo composition__photo--p3" />
                     </div>
                 </div>
             </div>
